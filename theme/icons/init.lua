@@ -12,12 +12,9 @@ return {
 	multimedia 			= dir .. 'tag-list/' .. 'multimedia.svg',
 	sandbox 			= dir .. 'tag-list/' .. 'sandbox.svg',
 	terminal 			= dir .. 'tag-list/' .. 'terminal.svg',
-	graphics 			= dir .. 'tag-list/' .. 'graphics.svg',
-	menu 				= dir .. 'tag-list/' .. 'menu.svg',
 	mail        = dir .. 'tag-list/' .. 'mail.svg',
 	close_small 		= dir .. 'tag-list/' .. 'close-small.svg',
-	menu_open        = dir .. 'tag-list/' .. 'menu-open.svg',
-	menu_global        = dir .. 'tag-list/' .. 'menu-global.svg',
+	main_menu        = dir .. 'tag-list/' .. 'main-menu.svg',
 
 	-- Others/System UI
 	close 				= dir .. 'close.svg',

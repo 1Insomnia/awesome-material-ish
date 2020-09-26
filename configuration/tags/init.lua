@@ -48,17 +48,11 @@ local tags = {
 		screen = 1
 	},
 	{
-		icon = icons.development,
-		type = 'any',
+		icon = icons.sandbox,
+		type = 'sandbox',
 		default_app = '',
 		screen = 1
 	}
-	-- {
-	--   icon = icons.social,
-	--   type = 'social',
-	--   default_app = 'discord',
-	--   screen = 1
-	-- }
 }
 
 tag.connect_signal(

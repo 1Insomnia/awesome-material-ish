@@ -240,7 +240,7 @@ mymainmenu = menu.build({
 	-- Not actually the size, but the quality of the icon
 	icon_size = 48,
 		before = default_app_menu,
-	after = tools_menu
+		after = tools_menu,
 })
 
-mylauncher = awful.widget.launcher({image = beautiful.awesome_icon, menu = mymainmenu})
+mylauncher = awful.widget.launcher({image = beautiful.awesome_icon, menu = mymainmenu, background = "#000000"})

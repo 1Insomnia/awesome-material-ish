@@ -16,48 +16,17 @@ return {
 
 		network = {
 			wired_interface = 'enp0s0',
-			wireless_interface = 'wlan0'
+			wireless_interface = 'wlp2s0'
 		},
 
 		clock = {
-			military_mode = false,
-		},
-
-		screen_recorder = {
-			resolution = '1366x768',
-			offset = '0,0',
-			audio = false,
-			save_directory = '$(xdg-user-dir VIDEOS)/Recordings/',
-			mic_level = '20',
-			fps = '30'
+			military_mode = true,
 		}
 	},
 
 	module = {
 		auto_start = {
 			debug_mode = false
-		},
-
-		dynamic_wallpaper = {
-			wall_dir = 'theme/wallpapers/',
-			valid_picture_formats = {"jpg", "png", "jpeg"},
-			-- Leave this table empty for full auto scheduling
-			wallpaper_schedule = {
-				['00:00:00'] = 'midnight-wallpaper.jpg',
-				['06:22:00'] = 'morning-wallpaper.jpg',
-				['12:00:00'] = 'noon-wallpaper.jpg',
-				['17:58:00'] = 'night-wallpaper.jpg'
-			-- Example of just using auto-scheduling with keywords
-			--[[
-				'midnight',
-				'morning',
-				'noon',
-				'afternoon',
-				'evening',
-				'night'
-			--]]
-			},
-			stretch = false
 		},
 
 		lockscreen = {

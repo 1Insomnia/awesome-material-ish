@@ -16,7 +16,7 @@ local create_open_default_button = function(s)
 						resize = true,
 						widget = wibox.widget.imagebox
 					},
-					margins = dpi(4),
+					margins = dpi(7),
 					widget = wibox.container.margin
 				},
 				widget = clickable_container

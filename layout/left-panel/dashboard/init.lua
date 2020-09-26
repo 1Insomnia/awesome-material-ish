@@ -65,7 +65,7 @@ return function(_, panel)
 			{
 				layout = wibox.layout.fixed.vertical,
 				spacing = dpi(7),
-				search_button,
+				-- search_button,
 				require('layout.left-panel.dashboard.hardware-monitor'),
 				require('layout.left-panel.dashboard.quick-settings'),
 
