@@ -12,7 +12,7 @@ return function(s, panel, action_bar_width)
 	local menu_icon = wibox.widget {
 		{
 			id = 'menu_btn',
-			image = icons.menu,
+			image = icons.search,
 			resize = true,
 			widget = wibox.widget.imagebox
 		},
@@ -52,7 +52,7 @@ return function(s, panel, action_bar_width)
 	panel:connect_signal(
 		'closed',
 		function()
-			menu_icon.menu_btn:set_image(gears.surface(icons.menu))
+			menu_icon.menu_btn:set_image(gears.surface(icons.search))
 		end
 	)
 
@@ -61,9 +61,11 @@ return function(s, panel, action_bar_width)
 		layout = wibox.layout.align.vertical,
 		forced_width = action_bar_width,
 		{
-			require('widget.search-apps')(),
+			open_dashboard_button,
 			tag_list(s),
 			require("widget.xdg-folders")(),
+			require('widget.search-apps')(),
+	    require('widget.info-center-toggle')(),
 			layout = wibox.layout.fixed.vertical,
 		},
 		nil,
@@ -74,7 +76,6 @@ return function(s, panel, action_bar_width)
 		require('widget.bluetooth')(s),
 		require('widget.network')(s),
 		require('widget.battery')(s),
-		open_dashboard_button,
 		}
 	}
 end

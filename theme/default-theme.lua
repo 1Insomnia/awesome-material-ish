@@ -18,7 +18,7 @@ theme.font = 'Inter Regular 10'
 theme.font_bold = 'Inter Bold 10'
 
 -- Menu icon theme
-theme.icon_theme = 'Tela-blue-dark'
+theme.icon_theme = 'Tela-dark'
 
 local awesome_overrides = function(theme)
 
@@ -129,15 +129,15 @@ local awesome_overrides = function(theme)
 	-- Client Decorations
 
 	-- Borders
-	theme.border_focus = gtk_variable().bg_color
-	theme.border_normal = gtk_variable().base_color
+	theme.border_focus = theme.system_green_dark
+	theme.border_normal = theme.background
 	theme.border_marked = '#CC9393'
-	theme.border_width = dpi(0)
+	theme.border_width = dpi(2)
 	theme.border_radius = dpi(9)
 
 	-- Decorations
-	theme.client_radius = dpi(9)
-	theme.useless_gap = dpi(15)
+	theme.client_radius = dpi(0) -- 9 looks pretty good
+	theme.useless_gap = dpi(12)
 
 	-- Menu
 	theme.menu_font = 'Inter Regular 11'
@@ -173,20 +173,20 @@ local awesome_overrides = function(theme)
 	theme.layout_floating = theme.icons .. 'layouts/floating.svg'
 	
 	-- Taglist
-	theme.taglist_bg_empty = theme.background .. '99'
-	theme.taglist_bg_occupied =  '#ffffff' .. '1A'
-	theme.taglist_bg_urgent = '#E91E63' .. '99'
-	theme.taglist_bg_focus = theme.background
+	theme.taglist_bg_empty = theme.background 
+	theme.taglist_bg_occupied = theme.system_blue_light
+	theme.taglist_bg_urgent = theme.system_red_dark
+	theme.taglist_bg_focus = theme.system_blue_dark
 	theme.taglist_spacing = dpi(0)
 
 	-- Tasklist
 	theme.tasklist_font = 'Inter Regular 10'
 	theme.tasklist_bg_normal = theme.background .. '99'
 	theme.tasklist_bg_focus = theme.background
-	theme.tasklist_bg_urgent = '#E91E63' .. '99'
-	theme.tasklist_fg_focus = '#DDDDDD'
-	theme.tasklist_fg_urgent = '#ffffff'
-	theme.tasklist_fg_normal = '#AAAAAA'
+	theme.tasklist_bg_urgent = theme.system_red_light 
+	theme.tasklist_fg_focus = theme.system_white_light
+	theme.tasklist_fg_urgent = theme.pure_white 
+	theme.tasklist_fg_normal = theme.system_white_dark
 
 	-- Notification
 	theme.notification_position = 'top_right'

@@ -45,7 +45,7 @@ local return_button = function()
 			widget = wibox.widget.imagebox,
 			resize = true
 		},
-		layout = wibox.layout.align.horizontal
+		layout = wibox.layout.align.vertical
 	}
 
 	local widget_button = wibox.widget {

@@ -45,19 +45,16 @@ local top_panel = function(s, offset)
 
 	s.systray = wibox.widget {
 		visible = false,
-		base_size = dpi(20),
+		base_size = dpi(45),
 		horizontal = true,
-		screen = 'primary',
+		screen = 'secondary',
 		widget = wibox.widget.systray
 	}
 
 	local clock 			= require('widget.clock')(s)
 	local layout_box 		= require('widget.layoutbox')(s)
 	local add_button 		= require('widget.open-default-app')(s)
-	s.tray_toggler  		= require('widget.tray-toggle')
-	s.mpd       			= require('widget.mpd')()
-	s.bluetooth   			= require('widget.bluetooth')()
-	s.info_center_toggle	= require('widget.info-center-toggle')()
+	-- s.mpd       			= require('widget.mpd')()
 
 	panel : setup {
 		layout = wibox.layout.align.horizontal,
@@ -76,9 +73,7 @@ local top_panel = function(s, offset)
 				margins = dpi(5),
 				widget = wibox.container.margin
 			},
-			s.tray_toggler,
-			s.info_center_toggle,
-			s.mpd,
+			-- s.mpd,
 			clock,
 			layout_box,
 		}

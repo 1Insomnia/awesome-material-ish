@@ -12,20 +12,26 @@ local tags = {
 	},
 	{
 		icon = icons.web_browser,
-		type = 'internet',
+		type = 'browser',
 		default_app = 'firefox',
 		screen = 1
 	},
 	{
 		icon = icons.text_editor,
 		type = 'code',
-		default_app = 'subl3',
+		default_app = 'code',
 		screen = 1
 	},
 	{
 		icon = icons.file_manager,
 		type = 'files',
-		default_app = 'dolphin',
+		default_app = 'thunar',
+		screen = 1
+	},
+	{
+		icon = icons.mail,
+		type = 'mail',
+		default_app = 'thunderbird',
 		screen = 1
 	},
 	{
@@ -34,22 +40,11 @@ local tags = {
 		default_app = 'vlc',
 		screen = 1
 	},
+
 	{
-		icon = icons.games,
-		type = 'games',
-		default_app = 'supertuxkart',
-		screen = 1
-	},
-	{
-		icon = icons.graphics,
-		type = 'art',
-		default_app = 'gimp-2.10',
-		screen = 1
-	},
-	{
-		icon = icons.sandbox,
-		type = 'sandbox',
-		default_app = 'virtualbox',
+		icon = icons.social,
+		type = 'social',
+		default_app = 'discord',
 		screen = 1
 	},
 	{

@@ -22,7 +22,6 @@ local create_xdg_widgets = function()
 			-- require('widget.xdg-folders.pictures')(),
 			-- require('widget.xdg-folders.videos')(),
 			separator,
-			require('widget.xdg-folders.trash')(),
 			layout = wibox.layout.fixed.vertical,
 	  	},
 	}

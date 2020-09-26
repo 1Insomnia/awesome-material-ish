@@ -31,9 +31,6 @@ return {
 		-- GUI Package manager
 		package_manager 		= 'pamac-manager',
 
-		-- Lockscreen
-		lock 					= 'awesome-client "awesome.emit_signal(\'module::lockscreen_show\')"',
-		
 		-- Quake-like Terminal
 		quake 					= 'kitty --name QuakeTerminal',
 

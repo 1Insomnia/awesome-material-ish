@@ -1,130 +1,112 @@
 configuration {
-	font:                       	"Inter Regular 10";
-	show-icons:                		true;
-	fullscreen:                     false;
-	sidebar-mode:               	true;
+    font:                           "Rec Mono Casual 16";
+    show-icons:                     true;
+	  icon-theme: 					"Tela-dark";
+    display-drun: 					"drun";
+    drun-display-format:            "{name}";
     threads:                        0;
-    matching:                      "fuzzy";
     scroll-method:                  0;
-    monitor:                        "primary";
+    disable-history:                false;
+    fullscreen:                     false;
+	  hide-scrollbar: 				true;
+	  sidebar-mode: 					false;
 }
 
+/* -- Glorious hehe -- */
 * {
-    background:                     #00000000;
-    background-color:               #00000000;
-    background-entry:               #00000033;
-    background-alt:                 #f2f2f215;
-    foreground:                     #f2f2f2EE;
-    foreground-selected:            #ffffffFF;
-    urgent:                         #E91E6366;
-    urgent-selected:                #E91E6377;
+    background:                     #000000;
+    background-alt:                 #1a2332;
+    foreground:                     #F8F8F2;
+    border:               			#6498EF;
+    selected:               		#92B6F4;
+    urgent:                         #EE4F84;
 }
 
 window {
-	transparency:					"real";
-	background: 					@background;
-	location:						west;
-	anchor:		 					west;
-	x-offset: 	 					0px;
-	height:		 					100%;
-	width:		 					350px;
-	orientation: 					vertical;
-}
-
-mainbox {
-	background-color:				@background;
-	padding: 						5px 5px 5px 5px;
-	width:							200px;
-	expand: 						true;
-	spacing:						12px;
-	children: 						[ inputbar, listview];
-}
-
-scrollbar {
-	background-color: 				@background-alt;
-	handle-width:					0;
-	margin: 						0 0 5px 0;
-	border-radius:  				9px;
-}
-
-listview {
+    transparency:                   "real";
     background-color:               @background;
-	spacing: 						0px;
-	dynamic:						true;
-	cycle:   						true;
-	scrollbar: 						true;
+    text-color:                     @foreground;
+    border-radius:                  0px;
+    height:                         40%;
+    width:                          40%;
+    location:                       center;
+    anchor:                         center;
+    x-offset:                       0;
 }
 
 prompt {
-    enabled:                        false;
+    enabled: 						true;
+	padding: 						0px 8px 0px 4px;
+	background-color: 				@background;
+	text-color: 					@foreground;
+	font:							"Rec Mono Casual 16";
 }
 
-button {
-    action:                         "ok";
-    str:                            " ";
-    font:                           "FantasqueSansMono Nerd Font 16";
-    expand:                         false;
-    text-color:                     @foreground;
+
+inputbar {
     background-color:               @background;
-    vertical-align:                 0.5;
-    horizontal-align:               0.5;
+    text-color:                     @foreground;
+    expand:                         false;
+    border:                  		1px;
+    border-radius:                  2px;
+    border-color:                  	@border;
+    margin:                         0px 0px 0px 0px;
+    padding:                        5px 5px 5px 5px;
+    position:                       center;
 }
 
 
 entry {
-	font:            				"Inter Regular 12";
-	background-color:               @background;
-	placeholder-color:          	@foreground;
-	placeholder:                	"Global Search";
-	blink:		                    true;
-	expand:         				true;
-	text-color:						@foreground;
-	vertical-align: 				0.5;
-}
-
-entry-wrapper {
-    orientation:                    horizontal;
-    margin:							0 12px 0 12px;
-    spacing:                        24px;
-    vertical-align:                 0.5;
     background-color:               @background;
-    children:                       [ button, entry ];
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search";
+    blink:                          true;
 }
 
-inputbar {
-	padding:                        14px;
-	margin:							10px 10px 14px 10px;
-    background-color:               @background-alt;
+case-indicator {
+    background-color:               @background;
     text-color:                     @foreground;
-    expand:                         false;
-    border-radius:                  9px;
-    position:                       north;
-    children:                       [ entry-wrapper ];
+    spacing:                        0;
+}
+
+
+listview {
+    background-color:               @background;
+    columns:                        1;
+    spacing:                        4px;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background;
+    children:                       [ inputbar, listview ];
+    spacing:                       	8px;
+    padding:                        8px 8px 8px 8px;
 }
 
 element {
-	margin:							0px 12px 0px 12px;
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    padding:                        10px 24px 10px 24px;
-    spacing:						24px;
-    border: 						0 0 0 0;
-	border-color: 					@background-alt;
-    border-radius:                  6px;
+    border-radius:                  4px;
+    padding:                        4px 4px 4px 4px;
 }
 
 element-icon {
-	size:                          	24px;
-	border-color:					@background;
-	border:                        	0;
+    size:                           32px;
+    border:                         0px;
 }
 
 element-text {
-	font:                      		"Inter Regular 11";
-	expand:                        	true;
-	horizontal-align:              	0.0;
-	vertical-align: 				0.5;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0;
+    margin:                         2px 0px 2px 2px;
 }
 
 element normal.urgent,
@@ -141,16 +123,19 @@ element alternate.active {
 }
 
 element selected {
-    background-color:               @background-alt;
-    text-color:                     @foreground-selected;
+    background-color:               @selected;
+    text-color:                     @foreground;
+    border:                  		1px;
+    border-radius:                  2px;
+    border-color:                  	@border;
 }
 
 element selected.urgent {
-    background-color:               @urgent-selected;
+    background-color:               @urgent;
     text-color:                     @foreground;
 }
 
 element selected.active {
     background-color:               @background-alt;
-    color:                          @foreground-selected;
+    color:                          @foreground;
 }
