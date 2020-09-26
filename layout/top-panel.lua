@@ -44,10 +44,10 @@ local top_panel = function(s, offset)
 	)
 
 	s.systray = wibox.widget {
-		visible = false,
-		base_size = dpi(45),
+		visible = true,
+		base_size = dpi(32),
 		horizontal = true,
-		screen = 'secondary',
+		screen = 'primary',
 		widget = wibox.widget.systray
 	}
 
@@ -69,10 +69,10 @@ local top_panel = function(s, offset)
 			layout = wibox.layout.fixed.horizontal,
 			spacing = dpi(5),
 			{
-				s.systray,
 				margins = dpi(5),
 				widget = wibox.container.margin
 			},
+			s.systray,
 			s.mpd,
 			clock,
 			layout_box,

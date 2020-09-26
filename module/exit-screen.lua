@@ -129,7 +129,7 @@ end
 
 local suspend_command = function()
 	awesome.emit_signal('module::exit_screen:hide')
-	awful.spawn.with_shell(apps.default.lock .. ' & systemctl suspend')
+	awful.spawn.with_shell('systemctl suspend')
 end
 
 local exit_command = function()
