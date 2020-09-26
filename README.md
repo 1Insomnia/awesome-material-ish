@@ -39,3 +39,16 @@ not a very big fan of visuals effects 😅
 - More keyboard centric
   - Remap clients keybinding to vim like
 
+##### @Uses
+
+- @Apps :
+  - Terminal : [Kitty](https://sw.kovidgoyal.net/kitty/)
+  - Launcher : [rofi-git](https://github.com/davatorium/rofi)
+  - File Manager : Thunar
+  - Editor : [Neovim](https://neovim.io/)
+  - Gui Editor : [VS Code](https://code.visualstudio.com/insiders/)
+
+- @Themes :
+  - GTK : Plata Noir Compact
+  - Icons : [Tela](https://github.com/vinceliuice/Tela-icon-theme) (dark)
+  - Font : [Recursive Mono](https://github.com/arrowtype/recursive/)
