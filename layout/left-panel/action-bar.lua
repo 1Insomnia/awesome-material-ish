@@ -12,7 +12,7 @@ return function(s, panel, action_bar_width)
 	local menu_icon = wibox.widget {
 		{
 			id = 'menu_btn',
-			image = icons.search,
+			image = icons.menu_open,
 			resize = true,
 			widget = wibox.widget.imagebox
 		},
@@ -25,7 +25,7 @@ return function(s, panel, action_bar_width)
 			menu_icon,
 			widget = clickable_container
 		},
-		bg = beautiful.background,
+		bg = '#3f51b5',
 		widget = wibox.container.background
 	}
 

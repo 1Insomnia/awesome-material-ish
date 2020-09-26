@@ -110,27 +110,6 @@ ruled.client.connect_signal(
 				placement = awful.placement.centered
 			}
 		}
-
-		-- Terminal emulators
-		ruled.client.append_rule {
-			id         = 'terminals',
-			rule_any   = { 
-				class = { 
-					'URxvt',
-					'XTerm',
-					'UXTerm',
-					'kitty',
-					'K3rmit'
-				}
-			},
-			properties = {
-				tag = '1',
-				switch_to_tags = true,
-				size_hints_honor = false,
-				titlebars_enabled = true
-			}
-		}
-
 		-- Browsers and chats
 		ruled.client.append_rule {
 			id         = 'web_browsers',

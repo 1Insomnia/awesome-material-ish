@@ -173,19 +173,19 @@ local awesome_overrides = function(theme)
 	theme.layout_floating = theme.icons .. 'layouts/floating.svg'
 	
 	-- Taglist
-	theme.taglist_bg_empty = theme.background 
-	theme.taglist_bg_occupied = theme.system_blue_light
+	theme.taglist_bg_empty = theme.background
+	theme.taglist_bg_occupied = theme.system_green_light
 	theme.taglist_bg_urgent = theme.system_red_dark
-	theme.taglist_bg_focus = theme.system_blue_dark
+	theme.taglist_bg_focus = theme.system_green_dark
 	theme.taglist_spacing = dpi(0)
 
 	-- Tasklist
 	theme.tasklist_font = 'Inter Regular 10'
-	theme.tasklist_bg_normal = theme.background .. '99'
+	theme.tasklist_bg_normal = theme.background
 	theme.tasklist_bg_focus = theme.background
-	theme.tasklist_bg_urgent = theme.system_red_light 
+	theme.tasklist_bg_urgent = theme.system_red_light
 	theme.tasklist_fg_focus = theme.system_white_light
-	theme.tasklist_fg_urgent = theme.pure_white 
+	theme.tasklist_fg_urgent = theme.pure_white
 	theme.tasklist_fg_normal = theme.system_white_dark
 
 	-- Notification

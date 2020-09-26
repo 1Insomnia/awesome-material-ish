@@ -16,6 +16,7 @@ return {
 	menu 				= dir .. 'tag-list/' .. 'menu.svg',
 	mail        = dir .. 'tag-list/' .. 'mail.svg',
 	close_small 		= dir .. 'tag-list/' .. 'close-small.svg',
+	menu_open        = dir .. 'tag-list/' .. 'menu-open.svg',
 
 	-- Others/System UI
 	close 				= dir .. 'close.svg',
