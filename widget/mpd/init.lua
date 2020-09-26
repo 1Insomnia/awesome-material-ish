@@ -22,7 +22,7 @@ local return_button = function()
 	local widget_button = wibox.widget {
 		{
 			widget,
-			margins = dpi(7),
+			margins = dpi(10),
 			widget = wibox.container.margin
 		},
 		widget = clickable_container
@@ -54,11 +54,11 @@ local return_button = function()
 	)
 
 	widget_button:connect_signal(
-		"mouse::enter", 
-		function() 
+		"mouse::enter",
+		function()
 			awful.spawn.easy_async_with_shell(
 				'mpc status',
-				function(stdout) 
+				function(stdout)
 				music_tooltip.text = string.gsub(stdout, '\n$', '')
 				end
 			)

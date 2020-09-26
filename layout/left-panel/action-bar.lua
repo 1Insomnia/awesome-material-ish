@@ -6,6 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 local icons = require('theme.icons')
 local tag_list = require('widget.tag-list')
 local clickable_container = require('widget.clickable-container')
+local apps = require('configuration.apps')
 
 return function(s, panel, action_bar_width)
 
@@ -19,7 +20,7 @@ return function(s, panel, action_bar_width)
 		margins = dpi(10),
 		widget = wibox.container.margin
 	}
-	
+
 	local open_dashboard_button = wibox.widget {
 		{
 			menu_icon,
@@ -41,6 +42,39 @@ return function(s, panel, action_bar_width)
 			)
 		)
 	)
+
+	local search_icon = wibox.widget {
+		{
+			id = 'menu_btn',
+			image = icons.menu_global,
+			resize = true,
+			widget = wibox.widget.imagebox
+		},
+		margins = dpi(10),
+		widget = wibox.container.margin
+	}
+
+	local global_search_button = wibox.widget {
+		{
+			search_icon,
+			widget = clickable_container
+		},
+		widget = wibox.container.background
+	}
+
+	global_search_button:buttons(
+		gears.table.join(
+			awful.button(
+				{},
+				1,
+				nil,
+				function()
+					awful.spawn(apps.default.rofi_global, false)
+				end
+			)
+		)
+	)
+
 
 	panel:connect_signal(
 		'opened',
@@ -65,6 +99,7 @@ return function(s, panel, action_bar_width)
 			tag_list(s),
 			require("widget.xdg-folders")(),
 			require('widget.search-apps')(),
+			global_search_button,
 	    require('widget.info-center-toggle')(),
 			layout = wibox.layout.fixed.vertical,
 		},
@@ -76,6 +111,7 @@ return function(s, panel, action_bar_width)
 		require('widget.bluetooth')(s),
 		require('widget.network')(s),
 		require('widget.battery')(s),
+		require('widget.exit-session')(s)
 		}
 	}
 end

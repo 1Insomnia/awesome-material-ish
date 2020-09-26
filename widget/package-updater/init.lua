@@ -32,7 +32,7 @@ local return_button = function()
 	local widget_button = wibox.widget {
 		{
 			widget,
-			margins = dpi(10),
+			margins = dpi(12),
 			widget = wibox.container.margin
 		},
 		widget = clickable_container
@@ -45,13 +45,13 @@ local return_button = function()
 				1,
 				nil,
 				function()
-					
+
 					if update_available then
 						awful.spawn(apps.default.package_manager .. ' --updates', false)
-					
+
 					else
 						awful.spawn(apps.default.package_manager, false)
-					
+
 					end
 				end
 			)
@@ -72,7 +72,7 @@ local return_button = function()
 				else
 					return 'We are up-to-date!'
 				end
-			
+
 			end,
 			preferred_positions = {'right', 'left', 'top', 'bottom'}
 		}
@@ -91,7 +91,7 @@ local return_button = function()
 			else
 				update_available = false
 				icon_name = 'package'
-				
+
 			end
 
 			widget.icon:set_image(widget_icon_dir .. icon_name .. '.svg')
