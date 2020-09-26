@@ -25,7 +25,7 @@ return function(s, panel, action_bar_width)
 			menu_icon,
 			widget = clickable_container
 		},
-		bg = beautiful.background .. '66',
+		bg = beautiful.background,
 		widget = wibox.container.background
 	}
 
@@ -67,6 +67,14 @@ return function(s, panel, action_bar_width)
 			layout = wibox.layout.fixed.vertical,
 		},
 		nil,
-		open_dashboard_button
+		{
+		layout = wibox.layout.fixed.vertical,
+		wibox.container.margin(systray, dpi(10), dpi(10)),
+		require('widget.package-updater')(s),
+		require('widget.bluetooth')(s),
+		require('widget.network')(s),
+		require('widget.battery')(s),
+		open_dashboard_button,
+		}
 	}
 end

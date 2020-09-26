@@ -17,7 +17,7 @@ local client_keys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey},
-		'q',
+		'c',
 		function(c)
 			c:kill()
 		end,
@@ -25,7 +25,7 @@ local client_keys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey},
-		'd',
+		'j',
 		function()
 			awful.client.focus.byidx(1)
 		end,
@@ -33,7 +33,7 @@ local client_keys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey},
-		'a',
+		'k',
 		function()
 			awful.client.focus.byidx(-1)
 		end,
@@ -41,7 +41,7 @@ local client_keys = awful.util.table.join(
 	),
 	awful.key(
 		{ modkey, 'Shift'  },
-		'd',
+		'j',
 		function ()
 			awful.client.swap.byidx(1)
 		end,
@@ -49,7 +49,7 @@ local client_keys = awful.util.table.join(
 	),
 	awful.key(
 		{ modkey, 'Shift' },
-		'a',
+		'k',
 		function ()
 			awful.client.swap.byidx(-1)
 		end,
@@ -91,17 +91,6 @@ local client_keys = awful.util.table.join(
 			})
 		end,
 		{description = 'align a client to the center of the focused screen', group = 'client'}
-	),
-	awful.key(
-		{modkey},
-		'c',
-		function(c)
-			c.fullscreen = false
-			c.maximized = false
-			c.floating = not c.floating
-			c:raise()
-		end,
-		{description = 'toggle floating', group = 'client'}
 	),
 	awful.key(
 		{modkey},

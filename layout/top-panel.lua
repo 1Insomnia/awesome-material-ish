@@ -19,7 +19,7 @@ local top_panel = function(s, offset)
 		ontop = true,
 		screen = s,
 		type = 'dock',
-		height = dpi(28),
+		height = dpi(45),
 		width = s.geometry.width - offsetx,
 		x = s.geometry.x + offsetx,
 		y = s.geometry.y,
@@ -55,12 +55,8 @@ local top_panel = function(s, offset)
 	local layout_box 		= require('widget.layoutbox')(s)
 	local add_button 		= require('widget.open-default-app')(s)
 	s.tray_toggler  		= require('widget.tray-toggle')
-	s.updater 				= require('widget.package-updater')()
-	s.screen_rec 			= require('widget.screen-recorder')()
 	s.mpd       			= require('widget.mpd')()
 	s.bluetooth   			= require('widget.bluetooth')()
-	s.battery     			= require('widget.battery')()
-	s.network       		= require('widget.network')()
 	s.info_center_toggle	= require('widget.info-center-toggle')()
 
 	panel : setup {
@@ -71,7 +67,7 @@ local top_panel = function(s, offset)
 			task_list(s),
 			add_button
 		}, 
-		clock,
+		nil,
 		{
 			layout = wibox.layout.fixed.horizontal,
 			spacing = dpi(5),
@@ -81,14 +77,10 @@ local top_panel = function(s, offset)
 				widget = wibox.container.margin
 			},
 			s.tray_toggler,
-			s.updater,
-			s.screen_rec,
+			s.info_center_toggle,
 			s.mpd,
-			s.network,
-			s.bluetooth,
-			s.battery,
+			clock,
 			layout_box,
-			s.info_center_toggle
 		}
 	}
 

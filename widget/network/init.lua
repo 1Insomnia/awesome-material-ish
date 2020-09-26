@@ -23,8 +23,8 @@ local config = require('configuration.config')
 
 -- Configuration
 local interfaces = {
-	wlan_interface = config.widget.network.wireless_interface or 'wlan0',
-	lan_interface = config.widget.network.wired_interface or 'enp0s25'
+	wlan_interface = config.widget.network.wireless_interface or 'wlp2s0',
+	lan_interface = config.widget.network.wired_interface or 'enp1s0'
 }
 
 local network_mode = nil
@@ -51,7 +51,7 @@ local return_button = function()
 	local widget_button = wibox.widget {
 		{
 			widget,
-			margins = dpi(7),
+			margins = dpi(10),
 			widget = wibox.container.margin
 		},
 		widget = clickable_container
