@@ -137,7 +137,7 @@ local awesome_overrides = function(theme)
 
 	-- Decorations
 	theme.client_radius = dpi(0) -- 9 looks pretty good
-	theme.useless_gap = dpi(12)
+	theme.useless_gap = dpi(10)
 
 	-- Menu
 	theme.menu_font = 'Inter Regular 11'
@@ -145,13 +145,12 @@ local awesome_overrides = function(theme)
 
 	theme.menu_height = dpi(34)
 	theme.menu_width = dpi(200)
-	theme.menu_border_width = dpi(20)
-	theme.menu_bg_focus = theme.accent .. 'CC'
+	theme.menu_bg_focus = theme.system_green_light
 
-	theme.menu_bg_normal =  theme.background:sub(1,7) .. '33'
-	theme.menu_fg_normal = '#ffffff'
-	theme.menu_fg_focus = '#ffffff'
-	theme.menu_border_color = theme.background:sub(1,7) .. '5C'
+	theme.menu_bg_normal =  theme.background
+	theme.menu_fg_normal = theme.foreground
+	theme.menu_fg_focus = theme.foreground
+	theme.menu_border_color = theme.system_green_light
 
 	-- Tooltips
 
@@ -160,7 +159,7 @@ local awesome_overrides = function(theme)
 	theme.tooltip_border_width = 0
 	theme.tooltip_gaps = dpi(5)
 	theme.tooltip_shape = function(cr, w, h)
-		gears.shape.rounded_rect(cr, w, h, dpi(6))
+		gears.shape.rounded_rect(cr, w, h, dpi(0))
 	end
 
 	-- Separators
