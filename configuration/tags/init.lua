@@ -59,8 +59,8 @@ tag.connect_signal(
 	'request::default_layouts',
 	function()
 	    awful.layout.append_default_layouts({
-			awful.layout.suit.spiral.dwindle,
 			awful.layout.suit.tile,
+			awful.layout.suit.spiral.dwindle,
 			awful.layout.suit.floating,
 			awful.layout.suit.max
 	    })
@@ -76,7 +76,7 @@ screen.connect_signal(
 				{
 					icon = tag.icon,
 					icon_only = true,
-					layout = awful.layout.suit.spiral.dwindle,
+					layout = awful.layout.suit.tile,
 					gap_single_client = true,
 					gap = beautiful.useless_gap,
 					screen = s,

@@ -118,7 +118,7 @@ local awesome_overrides = function(theme)
 	-- UI Groups
 	theme.groups_title_bg = '#ffffff' .. '15'
 	theme.groups_bg = '#ffffff' .. '10'
-	theme.groups_radius = dpi(9)
+	theme.groups_radius = dpi(0)
 
 	-- UI events
 	theme.leave_event = transparent
@@ -133,7 +133,7 @@ local awesome_overrides = function(theme)
 	theme.border_normal = theme.background
 	theme.border_marked = '#CC9393'
 	theme.border_width = dpi(2)
-	theme.border_radius = dpi(9)
+	theme.border_radius = dpi(0)
 
 	-- Decorations
 	theme.client_radius = dpi(0) -- 9 looks pretty good
