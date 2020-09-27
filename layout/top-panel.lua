@@ -54,7 +54,6 @@ local top_panel = function(s, offset)
 	local clock 			= require('widget.clock')(s)
 	local layout_box 		= require('widget.layoutbox')(s)
 	local add_button 		= require('widget.open-default-app')(s)
-	s.mpd       			= require('widget.mpd')()
 
 	panel : setup {
 		layout = wibox.layout.align.horizontal,
@@ -73,7 +72,7 @@ local top_panel = function(s, offset)
 				widget = wibox.container.margin
 			},
 			s.systray,
-			s.mpd,
+			require("widget.mpd"),
 			clock,
 			layout_box,
 		}

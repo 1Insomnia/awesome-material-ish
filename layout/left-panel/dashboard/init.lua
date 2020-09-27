@@ -68,6 +68,7 @@ return function(_, panel)
 				-- search_button,
 				require('layout.left-panel.dashboard.hardware-monitor'),
 				require('layout.left-panel.dashboard.quick-settings'),
+				require('widget.mpd'),
 
 			},
 			nil,

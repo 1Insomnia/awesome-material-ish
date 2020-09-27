@@ -19,19 +19,19 @@ local globalKeys = awful.util.table.join(
 		hotkeys_popup.show_help,
 		{description = 'show help', group = 'awesome'}
 	),
-	awful.key({modkey, 'Control'},
+	awful.key({modkey, 'Shift'},
 		'r',
 		awesome.restart,
 		{description = 'reload awesome', group = 'awesome'}
 	),
 
-	awful.key({modkey, 'Control'},
+	awful.key({modkey, 'Shift'},
 		'q',
 		awesome.quit,
 		{description = 'quit awesome', group = 'awesome'}
 	),
 	awful.key(
-		{altkey, 'Shift'},
+		{modkey},
 		'l',
 		function()
 			awful.tag.incmwfact(0.05)
@@ -39,7 +39,7 @@ local globalKeys = awful.util.table.join(
 		{description = 'increase master width factor', group = 'layout'}
 	),
 	awful.key(
-		{altkey, 'Shift'},
+		{modkey},
 		'h',
 		function()
 			awful.tag.incmwfact(-0.05)

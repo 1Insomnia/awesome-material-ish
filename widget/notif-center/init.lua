@@ -31,7 +31,7 @@ local notif_center = function(s)
 				s.clear_all
 			},
 		},
-		s.notifbox_layout
+		s.notifbox_layout,
 	}
 end
 
