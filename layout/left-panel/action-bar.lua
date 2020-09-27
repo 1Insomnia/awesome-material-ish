@@ -54,7 +54,7 @@ return function(s, panel, action_bar_width)
 	panel:connect_signal(
 		'closed',
 		function()
-			menu_icon.menu_btn:set_image(gears.surface(icons.search))
+			menu_icon.menu_btn:set_image(gears.surface(icons.main_menu))
 		end
 	)
 
