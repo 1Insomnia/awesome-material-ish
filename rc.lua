@@ -1,8 +1,4 @@
--- ░█▀▀░█░░░█▀█░█▀█░█▀█░█░█
--- ░█▀▀░█░░░█░█░█▀▀░█▀▀░░█░
--- ░▀░░░▀▀▀░▀▀▀░▀░░░▀░░░░▀░
--- Banner generated using `toilet -f pagga AwesomeWM"
-
+-- ISHHHHHHH
 local gears = require('gears')
 local beautiful = require('beautiful')
 local awful = require('awful')
@@ -44,7 +40,7 @@ require('module.auto-start')
 require('module.exit-screen')
 require('module.quake-terminal')
 require('module.menu')
--- require('module.titlebar')
+require('module.titlebar')
 require('module.brightness-osd')
 require('module.volume-osd')
 

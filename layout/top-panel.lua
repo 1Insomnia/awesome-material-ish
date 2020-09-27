@@ -44,8 +44,8 @@ local top_panel = function(s, offset)
 	)
 
 	s.systray = wibox.widget {
-		visible = true,
-		base_size = dpi(32),
+		visible = false,
+		base_size = dpi(22),
 		horizontal = true,
 		screen = 'primary',
 		widget = wibox.widget.systray
