@@ -24,12 +24,6 @@ local globalKeys = awful.util.table.join(
 		awesome.restart,
 		{description = 'reload awesome', group = 'awesome'}
 	),
-
-	awful.key({modkey, 'Shift'},
-		'q',
-		awesome.quit,
-		{description = 'quit awesome', group = 'awesome'}
-	),
 	awful.key(
 		{modkey},
 		'l',
