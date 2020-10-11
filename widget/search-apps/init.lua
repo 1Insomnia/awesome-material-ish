@@ -13,7 +13,7 @@ local return_button = function()
 	local widget = wibox.widget {
 		{
 			id = 'icon',
-			image = widget_icon_dir .. 'app-launcher.svg',
+			image = widget_icon_dir .. 'app-launcher.png',
 			widget = wibox.widget.imagebox,
 			resize = true
 		},

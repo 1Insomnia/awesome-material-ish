@@ -101,7 +101,7 @@ local build_button = function(icon, name)
 						image = icon,
 						widget = wibox.widget.imagebox
 					},
-					margins = dpi(16),
+					margins = dpi(0),
 					widget = wibox.container.margin
 				},
 				bg = beautiful.groups_bg,
@@ -319,7 +319,7 @@ screen.connect_signal(
 					nil,
 					{
 						widget = wibox.container.margin,
-						margins = dpi(15),
+						margins = dpi(0),
 						greeter_message
 					},
 					nil
@@ -342,7 +342,7 @@ screen.connect_signal(
 							layout = wibox.layout.fixed.vertical
 						},
 						widget = wibox.container.margin,
-						margins = dpi(15)
+						margins = dpi(0)
 					},
 					nil
 				}

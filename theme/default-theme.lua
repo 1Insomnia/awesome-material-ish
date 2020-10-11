@@ -26,7 +26,8 @@ local awesome_overrides = function(theme)
 	theme.icons = theme_dir .. '/icons/'
 
 	-- Default wallpaper path
-	theme.wallpaper = theme.dir .. '/wallpapers/hex-abstract-material.jpg'
+	-- theme.wallpaper = theme.dir .. '/wallpapers/morpho.jpg'
+  gears.wallpaper.tiled(gears.filesystem.get_configuration_dir() .."theme/wallpapers/bg.png", nil, {x = 0, y = 597})
 
 	-- Default font
 	theme.font = 'Inter Regular 10'
@@ -130,7 +131,7 @@ local awesome_overrides = function(theme)
 
 	-- Borders
 	theme.border_focus = theme.system_green_dark
-	theme.border_normal = theme.background
+	theme.border_normal = "#282c34"
 	theme.border_marked = '#CC9393'
 	theme.border_width = dpi(2)
 	theme.border_radius = dpi(0)
@@ -192,7 +193,7 @@ local awesome_overrides = function(theme)
 	theme.notification_bg = theme.transparent
 	theme.notification_margin = dpi(5)
 	theme.notification_border_width = dpi(0)
-	theme.notification_border_color = theme.transparent
+	theme.notification_border_color = theme.bg_normal
 	theme.notification_spacing = dpi(5)
 	theme.notification_icon_resize_strategy = 'center'
 	theme.notification_icon_size = dpi(32)
@@ -200,7 +201,7 @@ local awesome_overrides = function(theme)
 	-- Client Snap Theme
 	theme.snap_bg = theme.background
 	theme.snap_shape = gears.shape.rectangle
-	theme.snap_border_width = dpi(15)
+	theme.snap_border_width = dpi(0)
 
 	-- Hotkey popup
 	theme.hotkeys_font = 'Inter Bold'

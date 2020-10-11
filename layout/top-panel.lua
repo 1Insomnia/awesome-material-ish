@@ -30,7 +30,7 @@ local top_panel = function(s, offset)
 
 	panel:struts
 	{
-		top = dpi(28)
+		top = dpi(45)
 	}
 
 	panel:connect_signal(
@@ -52,7 +52,6 @@ local top_panel = function(s, offset)
 	}
 
 	local clock 			= require('widget.clock')(s)
-	local layout_box 		= require('widget.layoutbox')(s)
 	local add_button 		= require('widget.open-default-app')(s)
 
 	panel : setup {
@@ -71,10 +70,7 @@ local top_panel = function(s, offset)
 				margins = dpi(5),
 				widget = wibox.container.margin
 			},
-			s.systray,
-			require("widget.mpd"),
-			clock,
-			layout_box,
+			clock
 		}
 	}
 

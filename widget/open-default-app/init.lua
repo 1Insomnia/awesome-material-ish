@@ -25,7 +25,7 @@ local create_open_default_button = function(s)
 			shape = gears.shape.circle,
 			widget = wibox.container.background
 		},
-		margins = dpi(4),
+		margins = dpi(7),
 		widget = wibox.container.margin
 	}
 

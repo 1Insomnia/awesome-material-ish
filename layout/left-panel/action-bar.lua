@@ -66,7 +66,6 @@ return function(s, panel, action_bar_width)
 			open_dashboard_button,
 			tag_list(s),
 			require("widget.xdg-folders")(),
-			require('widget.search-apps')(),
 			require('widget.global-search')(),
 	    require('widget.info-center-toggle')(),
 			layout = wibox.layout.fixed.vertical,
@@ -79,7 +78,7 @@ return function(s, panel, action_bar_width)
 		require('widget.bluetooth')(s),
 		require('widget.network')(s),
 		require('widget.battery')(s),
-		require('widget.exit-session')(s)
+		require('widget.layoutbox')(s)
 		}
 	}
 end

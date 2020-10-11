@@ -55,17 +55,14 @@ return {
 	run_on_start_up = {
 
 		-- Compositor
-		'picom -b --experimental-backends --dbus --config ' ..
-		config_dir .. '/configuration/picom.conf',
+		-- 'picom -b --experimental-backends --dbus --config ' ..
+		-- config_dir .. '/configuration/picom.conf',
 
 		-- Bluetooth tray icon
 		-- 'blueman-applet',
 
-		-- Music Server
-		-- 'mpd',
-
 		-- Power manager
-		'xfce4-power-manager',
+		-- 'xfce4-power-manager',
 
 		-- Credential manager
 		'/usr/lib/polkit-kde-authentication-agent-1 &' ..
@@ -77,16 +74,7 @@ return {
 		-- NetworkManager Applet
 		-- 'nm-applet',
 
-		-- Audio Equalizer
-		'pulseeffects --gapplication-service',
-
-		-- Auto lock timer
-		[[
-		xidlehook --not-when-fullscreen --not-when-audio --timer 600 \
-		"awesome-client 'awesome.emit_signal(\"module::lockscreen_show\")'" ""
-		]],
-
-		-- You can add more start-up applications here
+				-- You can add more start-up applications here
 		'xrandr --output HDMI1 --auto --right-of eDP1',
 	},
 
